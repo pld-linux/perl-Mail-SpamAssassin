@@ -18,7 +18,7 @@ Source0:	http://search.cpan.org/CPAN/authors/id/J/JM/JMASON/%{pdir}-%{pnam}-%{ve
 URL:		http://search.cpan.org/dist/Mail-SpamAssassin/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-#BuildArch:	noarch
+BuildRequires:	perl-Net-DNS >= 0.34
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
