@@ -8,16 +8,17 @@
 Summary:	Mail::SpamAssassin - Spam detector and markup engine
 #Summary(pl.UTF-8):
 Name:		perl-Mail-SpamAssassin
-Version:	3.2.5
+Version:	3.3.1
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/J/JM/JMASON/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	7fdc1651d0371c4a7f95ac9ae6f828a6
+# Source0-md5:	5a93f81fda315411560ff5da099382d2
 URL:		http://search.cpan.org/dist/Mail-SpamAssassin/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	perl-NetAddr-IP
 BuildRequires:	perl-Net-DNS >= 0.34
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,7 +43,7 @@ the spamd/spamc tools provided.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
+	INSTALLDIRS=vendor < /dev/null
 %{__make} \
 	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
