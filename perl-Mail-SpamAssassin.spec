@@ -1,3 +1,7 @@
+# NOTE: do not bump this package. Mail::SpamAssassin is built from
+# spamassassin.spec (as the perl-Mail-SpamAssassin subpackage); bringing
+# this standalone copy to a current release would ship the same binaries
+# and modules and conflict with the spamassassin package. Kept frozen.
 #
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
@@ -8,7 +12,7 @@ Summary:	Mail::SpamAssassin - Spam detector and markup engine
 #Summary(pl.UTF-8):
 Name:		perl-Mail-SpamAssassin
 Version:	3.3.1
-Release:	1
+Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
